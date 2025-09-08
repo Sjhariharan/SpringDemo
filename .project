@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>SpringDependencyInjection</name>
+=======
+	<name>SpringDemo</name>
+>>>>>>> 3d88d71aa358d5559081433a3ae68e72ef31d2af
 	<comment></comment>
 	<projects>
 	</projects>

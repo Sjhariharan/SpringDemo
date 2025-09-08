@@ -1,4 +1,5 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
+<<<<<<< HEAD
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -32,4 +33,17 @@
 		  <property name="name" value="a-ww"/>
 		  <property name="type" value="four-wheel"/>
 	     </bean>
+=======
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+        <bean id="Student" class="com.jsipder.SpringDemo.dto.Student">
+        <property name="stuId" value="1"/>
+        <property name="name" value="hari"/>
+        <property name="email" value="sjhari@gmail"/>
+        <property name="contact" value="123-445-555"/>
+        </bean>
+
+>>>>>>> 3d88d71aa358d5559081433a3ae68e72ef31d2af
 </beans>

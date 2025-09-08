@@ -3,19 +3,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-<<<<<<< HEAD
-  <groupId>Qspider</groupId>
-  <artifactId>DependencyInjection</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-
-  <name>DependencyInjection</name>
-=======
   <groupId>com.jsipder</groupId>
   <artifactId>SpringDemo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <name>SpringDemo</name>
->>>>>>> 3d88d71aa358d5559081433a3ae68e72ef31d2af
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
