@@ -1,12 +1,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-<<<<<<< HEAD
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!--
 	bean definitions here -->
-	
-	<!--by using this below method we can do dependencyInjection but it is not recommended to use -->
+<!-- CAR and Engine Class-->
+	<!--by using this below method we can do dependencyInjection but it is not recommended to use 
+	because we cant acess the Engin class (tigth Coupling)-->
 	
 	<!-- <bean id="car" class="Qspider.DependencyInjection.dto.Car">
 	     <property name="carId" value="1"/>
@@ -20,7 +20,8 @@
 			</bean>
 	     </property> -->
 	     
-	   <!-- this below method is recommed to use, we use refercence to do dependecyInjection  -->
+	   <!-- this below method is recommed to use, we use refercence to do dependecyInjection,by using this 
+	   we can acess both car,Engine and it is an loose coupling -->
 	     <bean id="car" class="Qspider.DependencyInjection.dto.Car">
 	     <property name="carId" value="1"/>
 	     <property name="name" value="audi"/>
@@ -33,17 +34,56 @@
 		  <property name="name" value="a-ww"/>
 		  <property name="type" value="four-wheel"/>
 	     </bean>
-=======
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
-        <bean id="Student" class="com.jsipder.SpringDemo.dto.Student">
-        <property name="stuId" value="1"/>
-        <property name="name" value="hari"/>
-        <property name="email" value="sjhari@gmail"/>
-        <property name="contact" value="123-445-555"/>
-        </bean>
+	     
+<!-- Hosipital,Doctor-->
+<bean id="doctor" class="Qspider.DependencyInjection.dto.Doctor">
+<property name="id" value="1" />
+<property name="name" value="hari" />
+<property name="contact" value="123-444-555" />
+<property name="list">
+<list>
+ <value>mbbs</value>
+ <value>Md</value>
+</list>
+</property>
+</bean>
 
->>>>>>> 3d88d71aa358d5559081433a3ae68e72ef31d2af
+<bean id="doctor2" class="Qspider.DependencyInjection.dto.Doctor">
+<property name="id" value="2" />
+<property name="name" value="valter" />
+<property name="contact" value="999-999-999" />
+<property name="list">
+<list>
+ <value>orathali</value>
+ <value>Ms</value>
+</list>
+</property>
+</bean>
+
+<bean id="doctor3" class="Qspider.DependencyInjection.dto.Doctor">
+<property name="id" value="3" />
+<property name="name" value="hari" />
+<property name="contact" value="111-000-000" />
+<property name="list">
+<list>
+ <value>artho</value>
+ <value>MS</value>
+</list>
+</property>
+</bean>
+
+<bean id="Hospital" class="Qspider.DependencyInjection.dto.Hospital">
+<property name="id" value="2"/>
+<property name="name" value="kaveri"/>
+<property name="address" value="xx-@gamil.com" />
+<property name="dr"> 
+<list>
+<ref  bean="doctor"/>
+<ref  bean="doctor2"/>
+<ref  bean="doctor3"/>
+</list>
+</property>
+
+
+</bean>
 </beans>
